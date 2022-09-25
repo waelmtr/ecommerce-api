@@ -138,9 +138,6 @@ class ProductController extends Controller
     public function show($id , Request $request)
     {    
         Product::find($id)->increment('views');
-        $category_id =  Product::find($id)->category_id;
-        echo Product::find($id)->comments[0]['comment'].
-        Category::find($category_id)->name;
      return  $product  = Product::find($id);
     }    /**
      * Update the specified resource in storage.
